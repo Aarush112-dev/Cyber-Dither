@@ -1,0 +1,1030 @@
+# MASTER BUILD PROMPT — CYBER DITHER 3D MUSIC VISUALIZER
+
+## 1. PROJECT VISION
+
+Build a fully functional, visually exceptional, browser-based 3D music visualizer called **CYBER DITHER**.
+
+The experience should feel like a futuristic cybernetic music laboratory, a digital underground club, and an interactive real-time audiovisual simulation combined into one polished web application.
+
+The website must not be a static mockup. It must be a working music player with a curated library of popular songs, functional playback controls, real-time audio-reactive 3D visualizations, animated particles, interactive camera controls, and a sophisticated cyberpunk user interface.
+
+Use the attached screenshot as the primary visual reference for the overall composition and colour palette, but develop the aesthetic into something more atmospheric, intricate, immersive, and refined.
+
+**The most important distinction: this is a music visualizer for popular existing songs, NOT an AI music-generation application.**
+
+Remove the entire AI music generator concept. There must be no procedural track generation, AI-generated music controls, BPM/key/track-length generation forms, or fake generated tracks.
+
+Instead, create an organised, searchable, visually appealing music library containing popular songs. Users should be able to browse the library, select a song, play it when an audio source is available, and watch the 3D environment respond to the music.
+
+Prioritise the following, in this order:
+
+1. A visually stunning, continuously animated 3D environment.
+2. A distinctive cyber-dither visual identity.
+3. A functional music library and playback system.
+4. Accurate, responsive, real-time audio-reactive visualisations.
+5. Beautiful transitions, micro-interactions, and cinematic camera movement.
+6. A genuinely usable and responsive interface.
+
+Do not sacrifice actual functionality for visual appearance, or visual quality for an unnecessarily complicated interface.
+
+---
+
+## 2. CORE AESTHETIC: CYBER DITHER
+
+Create a unique visual style called **Cyber Dither**.
+
+Cyber Dither combines:
+
+- Cyberpunk neon lighting.
+- Wireframe 3D geometry.
+- Retro-futuristic computer graphics.
+- Ordered dithering and pixelated gradients.
+- Glitch artefacts and chromatic aberration.
+- Volumetric light beams.
+- Digital particles and floating geometric debris.
+- Oscillating holographic grids.
+- Wireframe meshes that react to musical frequencies.
+- CRT-inspired texture, subtle scanlines, and phosphor-like glow.
+- Procedural-looking digital landscapes and abstract spatial structures.
+
+The result should feel like an advanced computer simulation displaying sound as a physical, three-dimensional object.
+
+Avoid a generic music-dashboard aesthetic. The interface should have a strong visual identity, comparable to a premium interactive digital art installation.
+
+### Colour palette
+
+Use an almost-black background with extremely dark blue and purple undertones.
+
+Primary colours:
+- Electric cyan: #51F5FF
+- Neon turquoise: #16D9D2
+- Electric magenta: #FF3B9D
+- Deep ultraviolet: #712EFF
+- Laser blue: #426BFF
+- Background black: #05050B
+- Panel background: #11111D
+- Secondary text: #8C91AE
+- Primary text: #F0F1FF
+
+Use cyan and magenta as the dominant accents, with violet and electric blue adding depth.
+
+The lighting should transition naturally between colours rather than making the entire scene uniformly bright.
+
+Use restrained bloom and glow. The scene should remain dark, atmospheric, and legible.
+
+### Dither rendering
+
+Dithering must be a defining visual feature, not simply a label or decorative texture.
+
+Implement a real-time post-processing effect that introduces a subtle ordered-dither or Bayer-matrix aesthetic to selected parts of the rendering.
+
+Where feasible, use a shader to quantise colour values and apply a screen-space dithering pattern. Make the effect adjustable through a DITHER INTENSITY control.
+
+The visual effect should create the impression of high-tech graphics rendered through a futuristic, slightly corrupted digital display.
+
+Include:
+- Subtle colour banding in volumetric gradients.
+- Fine pixel patterns in selected shadows and highlights.
+- Occasional controlled glitch distortions.
+- Slight RGB-channel separation during strong musical transients.
+- Subtle scanlines.
+- A configurable pixelation or dither scale.
+
+Do not apply aggressive pixelation to the entire interface. Text, buttons, song titles, and essential controls must remain sharp and readable.
+
+The dither effect should enhance the 3D environment, not destroy its detail.
+
+---
+
+## 3. PAGE LAYOUT AND COMPOSITION
+
+Use a full-viewport application layout, with the 3D scene occupying the majority of the available screen.
+
+The composition should take inspiration from the reference screenshot.
+
+### A. Top navigation bar
+
+Create a slim, floating navigation bar at the top of the viewport.
+
+On the left:
+- A custom CYBER DITHER wordmark.
+- A small animated waveform or digital symbol beside the logo.
+- A subtle cyan-to-magenta gradient across selected letters.
+
+In the centre or slightly right of centre:
+- Current environment name.
+- A small LIVE AUDIO indicator.
+- A visualiser performance indicator showing whether the scene is actively responding to audio.
+
+On the right:
+- Library button.
+- Visualiser button.
+- Settings button.
+- Fullscreen toggle.
+
+Keep the navigation compact. It must not compete with the central 3D scene.
+
+The header should use translucent dark surfaces, thin borders, restrained glow, and subtle backdrop blur.
+
+### B. Main 3D visualisation stage
+
+The centre of the screen must be dominated by a large, immersive WebGL scene.
+
+The scene must be visible immediately when the application loads. Do not hide it behind a welcome page or an unnecessary onboarding sequence.
+
+The initial scene should feature a large, slowly rotating, cyan-magenta wireframe sphere suspended in a dark digital void.
+
+Surround the sphere with:
+- Hundreds of independently moving particles.
+- Tiny luminous geometric fragments.
+- Floating squares, triangles, and points of light.
+- Fine connecting lines that occasionally form temporary constellations.
+- Distant digital structures.
+- Faint spatial grids.
+- Depth-dependent particle opacity.
+- Subtle atmospheric haze.
+- Sparse flashes of magenta and violet.
+
+The environment should have a clear sense of depth and scale.
+
+The camera should reveal that the scene is genuinely three-dimensional. Particles must move through space rather than simply slide across a flat background.
+
+The sphere must not be a static image. Its mesh, rotation, lighting, and deformation must continuously evolve.
+
+During playback, its behaviour must change in response to the music.
+
+During silence, it should continue a restrained idle animation.
+
+### C. Left control panel
+
+Create a floating control panel inspired by the screenshot.
+
+It should contain two main sections:
+
+1. MUSIC LIBRARY
+2. CURRENT TRACK
+
+The library should be the primary interactive element.
+
+Provide:
+- A search field.
+- Genre filters.
+- A scrollable list of available songs.
+- Track artwork or stylised album thumbnails.
+- Song title.
+- Artist name.
+- Track duration when known.
+- A play button for each available track.
+- A visual indicator for the currently selected song.
+- A clear indication of whether playback is available.
+
+Organise the library into categories such as:
+- All Songs
+- Electronic
+- Pop
+- Hip-Hop
+- Indie
+- Rock
+- Ambient
+- Trending
+
+Genre labels should be interactive filters, not decorative text.
+
+When a song is selected, update the current-track panel and player state immediately.
+
+The library must scroll independently without scrolling the entire application.
+
+Avoid making the panel excessively wide. The centre visualisation must remain the visual focus.
+
+### D. Right control panel
+
+Create a second floating panel containing visualisation and rendering controls.
+
+Organise controls into collapsible groups:
+
+**VISUALISER MODE**
+- Reactive Sphere
+- 3D Grid Bars
+- Neon Tunnel
+- Floating Cloud
+- Digital Waveform
+- Cybernetic Core
+
+**CAMERA**
+- Cinematic Camera toggle
+- Camera orbit speed
+- Camera distance
+- Reset Camera
+
+**RENDERING**
+- Dither Intensity
+- Pixel Scale
+- Bloom Intensity
+- Glitch Intensity
+- Particle Density
+- Particle Size
+- Particle Speed
+- Visualiser Sensitivity
+
+**COLOUR**
+- Cyberpunk preset
+- Cyan and Magenta
+- Ultraviolet
+- Electric Blue
+- Monochrome Phosphor
+- Custom accent colour, if practical.
+
+Every control must visibly affect the rendered scene.
+
+Use sliders for continuous parameters and buttons for discrete modes.
+
+Make the current selection obvious using a restrained cyan outline or illuminated indicator.
+
+The right panel should remain compact and organised. Avoid displaying every advanced control at maximum prominence simultaneously.
+
+---
+
+## 4. MUSIC LIBRARY: POPULAR EXISTING SONGS
+
+Replace AI-generated music with a curated catalogue of popular existing songs.
+
+Include a starter library of recognisable tracks from different genres and eras. Example entries include:
+
+- Blinding Lights — The Weeknd
+- Starboy — The Weeknd
+- After Hours — The Weeknd
+- One More Time — Daft Punk
+- Instant Crush — Daft Punk
+- Midnight City — M83
+- Strobe — deadmau5
+- Animals — Martin Garrix
+- Titanium — David Guetta ft. Sia
+- Bad Guy — Billie Eilish
+- Levitating — Dua Lipa
+- As It Was — Harry Styles
+- The Less I Know the Better — Tame Impala
+- Do I Wanna Know? — Arctic Monkeys
+- Sweater Weather — The Neighbourhood
+- Industry Baby — Lil Nas X and Jack Harlow
+- Starboy — The Weeknd
+- Lose Yourself to Dance — Daft Punk
+- Time — Hans Zimmer
+- Experience — Ludovico Einaudi
+
+Remove duplicate entries when building the actual catalogue.
+
+Treat this as a starter catalogue, not a requirement to use unavailable recordings. Include a sufficiently varied selection of songs to make the interface feel populated.
+
+### Important audio availability requirement
+
+Song metadata and audio playback are two separate things.
+
+Do not pretend that a song is playable merely because its title and artist appear in the library.
+
+Do not use fabricated audio files, silent placeholder tracks presented as real recordings, or random audio URLs.
+
+Use a legitimate source for audio playback.
+
+Preferred implementation options:
+
+1. Integrate a supported music service or authorised playback provider where feasible.
+2. Support locally supplied audio files through an upload control.
+3. Support direct audio URLs where the user has permission to use them.
+4. Provide a clearly labelled preview or external-listening option where a full recording cannot be played directly.
+
+If an external music provider requires authentication, API credentials, subscription access, or user consent, explain the requirement and implement the appropriate connection flow instead of pretending it already works.
+
+Do not assume that a public music API automatically grants access to full commercial recordings.
+
+If no audio source is available for a catalogue entry, it may still appear as a searchable track, but it must be marked unavailable for in-app playback until a legitimate source is connected.
+
+Where useful, include an optional local-file upload area so users can supply their own music.
+
+The interface must make the difference between selecting a song, loading an audio source, and actually playing audio clear.
+
+---
+
+## 5. AUDIO PLAYBACK SYSTEM
+
+Implement a proper music player.
+
+The player should include:
+
+- Play and pause.
+- Previous track.
+- Next track.
+- Seekable progress bar.
+- Current playback time.
+- Total duration when available.
+- Track title.
+- Artist name.
+- Playback status.
+- Volume control.
+- Mute toggle.
+- Shuffle.
+- Repeat.
+- Playlist or queue.
+- Loading and error states.
+
+The currently playing song should have a subtle animated visual indicator in the library.
+
+When a new song starts, transition the visualiser smoothly rather than abruptly resetting the entire scene.
+
+The playback interface should remain accessible while browsing other songs.
+
+A compact bottom player bar is recommended, provided it does not obstruct the central visualisation or overwhelm the layout.
+
+For local audio and supported direct audio sources, use the Web Audio API to analyse the actual audio being played.
+
+Implement audio analysis using:
+- AudioContext.
+- AnalyserNode.
+- Frequency-domain analysis.
+- Time-domain waveform analysis.
+- Smoothed frequency data.
+- Beat or transient estimation.
+- Low-, mid-, and high-frequency energy measurements.
+
+Handle browser autoplay restrictions correctly. Start audio only after the required user interaction.
+
+Resume a suspended AudioContext when appropriate.
+
+Handle track changes, loading failures, unavailable audio, and browser permission restrictions gracefully.
+
+Ensure the application does not create unnecessary duplicate AudioContext instances or attach multiple analysis pipelines to the same source.
+
+---
+
+## 6. REAL-TIME AUDIO-REACTIVE VISUALISATION
+
+The visualiser must respond to the actual music signal.
+
+Do not simulate a continuously bouncing sphere and claim that it is audio-reactive.
+
+Connect the visual behaviour to the analyser data.
+
+### Low-frequency response
+
+Use bass energy to control:
+- Sphere expansion and contraction.
+- Large-scale mesh deformation.
+- The amplitude of surrounding spatial waves.
+- Particle emission strength.
+- Subtle camera impulses.
+- The intensity of low-frequency lighting.
+
+Bass should create a feeling of physical mass and impact.
+
+### Mid-frequency response
+
+Use midrange energy to control:
+- Wireframe oscillation.
+- Surface ripples.
+- Geometric structures around the sphere.
+- The motion of connecting lines.
+- The rotation of selected components.
+- Secondary waveform deformations.
+
+### High-frequency response
+
+Use high-frequency energy to control:
+- Small particle bursts.
+- Fine mesh vibration.
+- Spark-like highlights.
+- Brief colour accents.
+- Tiny glitch events.
+- High-frequency rings and fragments.
+
+High-frequency effects should be delicate and rapid rather than overpowering.
+
+### Beat and transient response
+
+Estimate musical transients from the audio signal.
+
+When a strong transient occurs:
+- Briefly intensify the sphere's emission.
+- Trigger a controlled wave of particles.
+- Increase the brightness of selected wireframe edges.
+- Add a very short chromatic aberration pulse.
+- Create a subtle spatial ripple.
+
+The effect must be short, smooth, and proportional to the detected transient.
+
+Avoid constantly triggering effects in silence or producing excessive flashes.
+
+Use smoothing and hysteresis to prevent unstable triggering.
+
+The result should feel synchronised with the music, not randomly animated.
+
+### Audio-reactivity indicator
+
+Include a small indicator displaying one of the following states:
+- READY
+- LOADING
+- PLAYING
+- PAUSED
+- NO AUDIO SOURCE
+- ERROR
+
+When audio is playing, a compact frequency meter may display bass, mids, and highs in real time.
+
+Do not display invented BPM, energy, or frequency values. Only show measurements that are actually available or calculated.
+
+---
+
+## 7. THE PRIMARY VISUALISER: REACTIVE CYBER SPHERE
+
+The Reactive Sphere should be the default visualisation mode.
+
+Create a detailed, glowing wireframe sphere with enough geometric complexity to look sophisticated at normal desktop viewing sizes.
+
+Use a custom mesh or carefully generated spherical geometry.
+
+The sphere should feature:
+- Multiple intersecting wireframe patterns.
+- A mixture of triangles and polygonal structures.
+- Thin luminous lines.
+- Variable cyan, turquoise, violet, and magenta highlights.
+- Audio-reactive vertex displacement.
+- Subtle independent rotational motion.
+- Occasional surface ripples.
+- Depth-dependent brightness.
+- A restrained internal glow.
+- Optional concentric orbital rings.
+
+Avoid the appearance of a simple unlit wireframe primitive.
+
+The mesh should have enough structure to remain visually interesting even when the music is quiet.
+
+Implement smooth deformation using combinations of spherical harmonics, noise functions, radial displacement, or similar procedural techniques.
+
+Use frequency data to modulate deformation amplitude and speed.
+
+The sphere should retain its overall shape while visibly changing in response to the music.
+
+For stronger transients, allow the sphere to expand briefly and produce a travelling ripple across the mesh.
+
+Add a subtle halo behind the sphere to distinguish it from the dark background.
+
+The surrounding particles should orbit, drift, and occasionally align into transient geometric formations.
+
+Do not let the particles completely obscure the sphere.
+
+---
+
+## 8. ADDITIONAL VISUALISER MODES
+
+Each mode must have a distinct appearance and behaviour.
+
+Switching modes must work immediately and use a smooth transition where practical.
+
+### Mode A: REACTIVE SPHERE
+
+The primary wireframe sphere with frequency-driven deformation, orbital rings, and reactive particles.
+
+### Mode B: 3D GRID BARS
+
+Create a large three-dimensional field of vertical bars arranged in a grid.
+
+Each bar represents a frequency band or frequency bin.
+
+Bass frequencies should influence bars in one region, mids in another, and highs in another.
+
+The bars should extend upward from a dark digital floor.
+
+Use cyan-to-magenta gradients, luminous edges, and subtle reflections.
+
+The camera should be able to move through the grid in a cinematic fashion.
+
+The bars must respond to actual analyser values.
+
+### Mode C: NEON TUNNEL
+
+Create an endless-looking three-dimensional tunnel made from rings, polygons, or geometric frames.
+
+The tunnel should move toward or around the camera in a controlled manner.
+
+Use low-frequency energy to affect the tunnel's scale and high-frequency energy to illuminate fine details.
+
+The tunnel should create an impression of travelling through a digital space.
+
+Avoid motion that makes the user feel disoriented.
+
+### Mode D: FLOATING CLOUD
+
+Create a volumetric cloud of particles, points, and fine connecting lines.
+
+The cloud should continuously reorganise itself according to the music.
+
+Bass should influence broad expansion and contraction, mids should create flowing structures, and highs should generate fine particle motion.
+
+Use depth, lighting, and colour variation to create a genuinely three-dimensional appearance.
+
+### Mode E: DIGITAL WAVEFORM
+
+Create a three-dimensional waveform ribbon or stacked waveform surface.
+
+The waveform must be derived from actual time-domain audio data.
+
+Display a flowing combination of line geometry and a subtle dithered surface.
+
+Use frequency energy to affect the waveform's colour and surrounding particles.
+
+### Mode F: CYBERNETIC CORE
+
+Create a more complex central structure combining:
+- Rotating geometric shells.
+- Interlocking wireframe rings.
+- A central luminous core.
+- Orbiting fragments.
+- Reactive radial waveforms.
+- Multiple independently animated layers.
+
+Each layer should respond differently to the audio.
+
+The result should resemble an experimental digital reactor or a futuristic machine made entirely of light.
+
+---
+
+## 9. CINEMATIC CAMERA SYSTEM
+
+Implement a camera system that makes the visualiser feel like a virtual environment rather than a flat visual effect.
+
+Include:
+- Smooth orbital camera movement.
+- Adjustable camera distance.
+- Subtle automated rotation.
+- Optional cinematic camera mode.
+- Reset camera button.
+- Smooth transitions between visualisation modes.
+- Gentle camera response to strong musical transients.
+
+The cinematic camera should move slowly and deliberately.
+
+It may gradually orbit the central object, move slightly closer during musical builds, and widen the composition during quieter sections.
+
+Avoid uncontrolled zooming, rapid spinning, or constant camera shaking.
+
+Provide manual camera interaction using mouse dragging and scroll-wheel zoom where appropriate.
+
+Manual interaction should temporarily override automatic movement if necessary.
+
+When the user enables cinematic mode again, restore automatic movement smoothly.
+
+Keep the main subject visible and well-framed throughout the experience.
+
+---
+
+## 10. BACKGROUND ENVIRONMENT
+
+Create a layered digital environment.
+
+### Deep space
+
+Use a near-black background with sparse, glowing particles at different depths.
+
+Particle sizes should vary subtly.
+
+### Spatial grid
+
+Introduce faint grids that recede into the distance.
+
+Grid lines should occasionally become brighter in response to bass or strong transients.
+
+### Floating geometry
+
+Use small cubes, triangles, points, and fragmented polygons.
+
+Objects should move independently but coherently.
+
+### Atmospheric lighting
+
+Create subtle coloured light fields behind the main object.
+
+Use cyan on one side, magenta or violet on the other, and dark blue in the distance.
+
+### Digital artefacts
+
+Occasionally introduce restrained glitches:
+- Brief scanline shifts.
+- Short horizontal displacement.
+- Subtle RGB separation.
+- Tiny geometric flickers.
+
+These effects must be rare and deliberate.
+
+Do not cover the interface with glitch noise or make the experience look broken.
+
+---
+
+## 11. VISUAL DESIGN OF THE INTERFACE
+
+The interface should resemble a premium futuristic instrument panel.
+
+Use:
+- Dark translucent panels.
+- Thin borders.
+- Rounded corners, used sparingly.
+- Compact uppercase section labels.
+- Monospaced metadata where appropriate.
+- Crisp typography.
+- Subtle gradients.
+- Fine divider lines.
+- Small status indicators.
+- Restrained neon outlines.
+- Smooth hover transitions.
+
+Choose a modern sans-serif typeface for major headings and a readable monospaced typeface for technical information.
+
+Use a clear hierarchy between the brand, track title, controls, and secondary metadata.
+
+The interface should not look like a generic admin dashboard.
+
+Avoid excessive glowing borders, oversized buttons, thick shadows, or bright backgrounds.
+
+Use cyan or magenta to emphasise active elements, not every element.
+
+### Panel behaviour
+
+The left and right panels should be independently collapsible.
+
+When a panel is collapsed, the 3D scene should expand into the newly available space.
+
+On smaller screens, panels should become compact drawers or overlays.
+
+Never allow panels to overlap essential playback controls or make the central scene unusable.
+
+Remember the selected visualisation mode, current colour theme, and rendering preferences for the duration of the current session. Persistent storage may be used for harmless interface preferences.
+
+---
+
+## 12. TRACK LIBRARY INTERACTION
+
+Make the song library feel like a carefully designed music-discovery interface.
+
+Each song row should contain:
+- A small thumbnail or album-art placeholder.
+- Track title.
+- Artist.
+- Optional genre label.
+- Optional duration.
+- Play or loading indicator.
+
+Use authentic album artwork only when it can be sourced appropriately. Otherwise, create original abstract artwork using the application's own visual language.
+
+When hovering over a song:
+- Reveal a play button.
+- Slightly illuminate the row.
+- Show a restrained cyan or magenta accent.
+- Keep the text legible.
+
+When a song is selected:
+- Highlight the row.
+- Update the track title and artist.
+- Update the playback controls.
+- Load its authorised audio source if available.
+- Initialise the audio analyser when playback begins.
+
+Provide useful empty states for search results, unavailable tracks, and an empty queue.
+
+Search should filter the library immediately by song title or artist.
+
+Genre filters should work together with search.
+
+Allow users to queue songs and move between queued tracks.
+
+Use stable track IDs and avoid creating duplicate queue entries accidentally.
+
+Do not reload the entire application whenever the user changes songs or visualiser modes.
+
+---
+
+## 13. RESPONSIVE LAYOUT
+
+Design primarily for desktop monitors, but ensure the application works on tablets and mobile devices.
+
+### Desktop
+
+Use the full three-column composition:
+- Left music library.
+- Large central visualisation.
+- Right visualiser controls.
+
+Keep the central scene visually dominant.
+
+### Tablet
+
+Allow the side panels to collapse.
+
+Maintain a large central visualisation, with controls accessible through drawers or compact overlays.
+
+### Mobile
+
+Prioritise:
+- The central 3D visualisation.
+- Current track information.
+- Playback controls.
+- A compact mode selector.
+
+Move the library and advanced controls into accessible drawers.
+
+Ensure the layout fits the viewport without horizontal scrolling.
+
+Use responsive typography and touch-friendly controls.
+
+Respect reduced-motion preferences where practical.
+
+---
+
+## 14. TECHNICAL IMPLEMENTATION
+
+Use a modern frontend stack appropriate for a high-quality real-time 3D web application.
+
+Preferred stack:
+- React.
+- TypeScript.
+- Vite.
+- Three.js or React Three Fiber.
+- Drei where helpful.
+- Web Audio API.
+- GLSL shaders for custom rendering effects.
+- A lightweight, consistent UI styling system.
+
+These are preferred choices, not reasons to rebuild a working project unnecessarily. If the environment already has a compatible stack, inspect and reuse it.
+
+### 3D rendering
+
+Use WebGL through Three.js or an equivalent supported rendering library.
+
+Implement:
+- Efficient geometry generation.
+- Shader-based effects where appropriate.
+- Instanced meshes for large particle populations.
+- Controlled particle counts.
+- Efficient buffer updates.
+- Proper disposal of unused geometries and materials.
+- Smooth transitions between modes.
+- Resize-aware rendering.
+- Adaptive quality settings.
+
+Do not rebuild the entire 3D scene on every React render.
+
+Use refs, animation-frame callbacks, or appropriate rendering-loop mechanisms to update rapidly changing 3D properties efficiently.
+
+### Audio processing
+
+Implement a dedicated audio-analysis module that exposes smoothed values such as:
+- Bass energy.
+- Midrange energy.
+- High-frequency energy.
+- Overall loudness proxy.
+- Waveform samples.
+- Transient strength.
+
+Normalise the measurements to useful ranges.
+
+Do not assume raw FFT magnitudes are already normalised to a convenient 0–1 scale.
+
+Use configurable smoothing and avoid abrupt changes.
+
+### Shader effects
+
+Implement custom shaders where they materially improve the visual quality, particularly for:
+- Dither patterns.
+- Surface deformation.
+- Procedural gradients.
+- Glow or emissive accents.
+- Digital distortion.
+
+Use post-processing selectively.
+
+A high-quality scene with restrained effects is preferable to a slow scene overloaded with filters.
+
+### Performance
+
+Target smooth, responsive rendering on a typical modern laptop.
+
+Use a configurable quality setting:
+- Low.
+- Medium.
+- High.
+- Ultra.
+
+Adjust particle counts, rendering resolution, and expensive post-processing effects according to quality settings.
+
+Use device pixel ratio caps where necessary.
+
+Pause or reduce unnecessary animation when the tab is hidden.
+
+Handle WebGL initialisation failures gracefully.
+
+Never allow the interface to freeze because the 3D renderer fails.
+
+---
+
+## 15. APPLICATION ARCHITECTURE
+
+Organise the code into logical, maintainable modules.
+
+Suggested structure:
+
+- App: overall application state and layout.
+- Header: navigation and brand.
+- MusicLibrary: searchable song catalogue.
+- TrackRow: individual library entries.
+- AudioPlayer: playback controls.
+- AudioEngine: audio loading and playback management.
+- AudioAnalyser: frequency and waveform analysis.
+- VisualiserCanvas: main 3D scene.
+- ReactiveSphere: primary visualisation.
+- GridBars: frequency-grid mode.
+- NeonTunnel: tunnel mode.
+- FloatingCloud: particle-cloud mode.
+- DigitalWaveform: waveform mode.
+- CyberneticCore: layered core mode.
+- ParticleSystem: reusable particle effects.
+- CameraController: camera movement and interaction.
+- PostProcessing: dither and selected visual effects.
+- VisualiserControls: rendering and camera controls.
+- ThemeManager: colour presets and visual settings.
+
+Avoid placing the entire application into one enormous component.
+
+Separate the song metadata from audio-source resolution.
+
+Separate the audio analysis from visualisation rendering.
+
+Separate UI state from high-frequency animation state.
+
+Use TypeScript types for tracks, audio sources, visualiser modes, theme settings, and player state.
+
+Keep the project easy to extend with new visualiser modes later.
+
+---
+
+## 16. APPLICATION STATES AND ERROR HANDLING
+
+Implement all meaningful states.
+
+### Initial state
+
+The 3D environment is already rendered and slowly animating.
+
+The music library is visible.
+
+No track is falsely marked as playing.
+
+The interface indicates that the user can select a song or connect an audio source.
+
+### Track selected
+
+Display the correct title and artist.
+
+Resolve the track's audio source.
+
+Show a loading state if necessary.
+
+### Playing
+
+Update the progress bar using the actual playback position.
+
+Run the audio analysis.
+
+Animate the scene using the actual signal.
+
+### Paused
+
+Pause the audio and stop advancing the playback position.
+
+Return the visualiser to a gentle idle animation rather than freezing the entire scene.
+
+### Track unavailable
+
+Explain that the recording is not available for in-app playback.
+
+Offer a supported alternative where appropriate.
+
+### Audio failure
+
+Display a concise error message and allow the user to retry or select another source.
+
+### WebGL failure
+
+Keep the library and playback interface accessible wherever possible, and explain that 3D rendering could not be initialised.
+
+Never display a fake success state.
+
+---
+
+## 17. FINISHING DETAILS
+
+Add carefully designed micro-interactions throughout the application.
+
+Examples:
+- The wordmark softly illuminates on hover.
+- Active buttons receive a subtle glow.
+- Panel transitions use smooth easing.
+- The currently playing song has a small animated spectrum indicator.
+- Switching visualiser modes produces a brief, elegant geometric transition.
+- Opening the library may cause nearby particles to drift subtly.
+- Moving a rendering slider updates the 3D scene immediately.
+- Entering fullscreen expands the visualisation while preserving access to essential playback controls.
+- The visualiser's lighting subtly evolves as the music changes.
+
+Use motion with intention.
+
+Do not animate every element constantly.
+
+The scene should remain visually interesting even when the user is not interacting with it, while the controls should remain stable and predictable.
+
+---
+
+## 18. STRICTLY PROHIBITED IMPLEMENTATION SHORTCUTS
+
+Do not:
+- Replace the 3D scene with a static image.
+- Create a flat 2D imitation of a 3D environment.
+- Use a prerecorded animation and claim it responds to live audio.
+- Make the wireframe sphere rotate without any real audio-reactive deformation.
+- Populate the library with fabricated recordings.
+- Claim that a song is playing when no audio is being played.
+- Create buttons that do nothing.
+- Display fake track durations, playback positions, or audio measurements.
+- Leave sliders disconnected from the rendering system.
+- Implement visualiser modes that all look identical.
+- Use an excessively bright interface that destroys the dark cyberpunk atmosphere.
+- Apply so much dithering that the interface becomes unreadable.
+- Allow the side panels to consume most of the screen.
+- Add AI music generation features.
+- Leave the application as a nonfunctional visual prototype.
+- Introduce unnecessary login requirements when the basic experience can work without them.
+
+Use mock data only for legitimate interface previews and clearly distinguish mock metadata from real playback.
+
+---
+
+## 19. ACCEPTANCE TESTS
+
+Before declaring the application complete, verify each of the following.
+
+**Visual experience**
+- [ ] The 3D environment renders immediately.
+- [ ] The sphere is genuinely three-dimensional.
+- [ ] The scene includes depth, particles, and neon lighting.
+- [ ] The cyber-dither effect is visibly implemented.
+- [ ] The scene animates smoothly when idle.
+- [ ] The camera controls work.
+- [ ] All six visualiser modes have distinct appearances.
+- [ ] The visualiser responds to actual audio when available.
+
+**Music player**
+- [ ] The library contains a varied collection of popular songs.
+- [ ] Search works by title and artist.
+- [ ] Genre filters work.
+- [ ] Selecting a track updates the interface.
+- [ ] Playback works when a valid source is available.
+- [ ] Pause, resume, seeking, volume, and track navigation work.
+- [ ] The queue works.
+- [ ] Unavailable recordings are clearly identified.
+- [ ] Playback errors are handled gracefully.
+
+**Visual controls**
+- [ ] Every visualisation button works.
+- [ ] Dither intensity changes the dither effect.
+- [ ] Particle controls affect particle rendering.
+- [ ] Camera settings change camera behaviour.
+- [ ] Colour presets change the scene's colour palette.
+- [ ] Quality settings have a real performance effect.
+
+**Reliability**
+- [ ] No obvious console errors.
+- [ ] No broken imports.
+- [ ] No fabricated playback success.
+- [ ] No unnecessary full-scene reconstruction on every UI update.
+- [ ] The application handles resizing.
+- [ ] The interface remains usable if WebGL fails.
+- [ ] Mobile and tablet layouts remain functional.
+
+---
+
+## 20. FINAL DELIVERY INSTRUCTIONS
+
+Build the actual application, not just a design proposal or a description of how to build it.
+
+Start by establishing the working 3D scene, then integrate the audio engine, music library, controls, and visual effects.
+
+Use the attached screenshot as a visual reference throughout development.
+
+The first rendered version should already resemble a polished cybernetic music visualiser, with a dark background, a prominent luminous wireframe sphere, cyan-magenta lighting, floating particles, and compact side panels.
+
+Then progressively implement the remaining functionality.
+
+Prioritise working end-to-end interactions over decorative placeholders.
+
+If a music provider, credential, or external service is required, clearly identify that dependency and implement everything that can work without it.
+
+Do not claim to have completed a feature until it actually works.
+
+**The final result should feel like entering a living, three-dimensional digital world where popular music becomes geometry, light, particles, and motion.**
+
+It should be immediately recognisable as CYBER DITHER: a dark, futuristic, audio-reactive environment with a distinctive digital aesthetic, not a conventional music player with a visualisation added as an afterthought.

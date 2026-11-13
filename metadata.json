@@ -1,0 +1,6 @@
+{
+  "name": "CYBER DITHER",
+  "description": "Real-time audio-reactive 3D music visualiser featuring ordered 8x8 Bayer dithering, Web Audio API analysis, six interactive WebGL modes, and a curated music library.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
