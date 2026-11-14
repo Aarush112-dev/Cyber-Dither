@@ -79,21 +79,17 @@ The application runs completely locally without requiring GitHub credentials or 
 
 ## GitHub Actions & GitHub Pages Deployment
 
-The included workflow at `.github/workflows/ci-deploy.yml` runs on pushes and pull requests to `main`:
+The workflow at `.github/workflows/ci-deploy.yml` runs automatically on pushes to `main` / `master`, pull requests, and manual `workflow_dispatch` triggers:
 
-1. Installs dependencies via `npm ci`.
+1. Sets up Node.js 22 and installs dependencies cleanly (`npm ci` when a lockfile is present, otherwise `npm install`).
 2. Runs `npm run lint` (`tsc --noEmit`).
-3. Builds the Vite bundle via `npm run build` and fails the workflow if linting or building fails.
+3. Configures the GitHub Pages base path automatically via `actions/configure-pages` (setting `VITE_BASE_PATH` to `/<repository-name>/` for project sites or `/` for user/custom-domain sites).
+4. Builds the production Vite bundle into `dist/` (`npm run build`) and adds `dist/404.html` for SPA fallback.
+5. On pushes to `main` / `master` or manual workflow runs, uploads `dist/` and deploys directly to **GitHub Pages**.
 
-### Enabling Optional GitHub Pages Deployment
+### Enabling GitHub Pages in Your Repository
 
-To deploy the production `dist/` output to GitHub Pages:
+1. Export or push this repository to GitHub with `main` (or `master`) as the default branch.
+2. In your GitHub repository, open **Settings → Pages** and set **Source** to **GitHub Actions**.
+3. Push a commit to `main` (or run **Actions → Build & Deploy to GitHub Pages → Run workflow**) to publish the live site.
 
-1. Push this repository to GitHub with `main` as the default branch.
-2. In your GitHub repository, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
-3. Go to **Settings → Secrets and variables → Actions → Variables** and create a repository variable:
-   - Name: `ENABLE_PAGES`
-   - Value: `true`
-4. Push to `main` (or trigger the workflow via **Actions → Run workflow**).
-
-When `ENABLE_PAGES` is `true`, the workflow automatically sets `VITE_BASE_PATH=/<repository-name>/` so `vite.config.ts` resolves all assets cleanly under your GitHub Pages subpath. Note that deployment is only operational once your repository permissions, Pages source, and `ENABLE_PAGES` variable are configured and the workflow completes successfully.
