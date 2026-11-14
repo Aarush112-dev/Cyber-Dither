@@ -81,7 +81,7 @@ The application runs completely locally without requiring GitHub credentials or 
 
 The workflow at `.github/workflows/ci-deploy.yml` runs automatically on pushes to `main` / `master`, pull requests, and manual `workflow_dispatch` triggers:
 
-1. Sets up Node.js 22 and installs dependencies cleanly (`npm ci` when a lockfile is present, otherwise `npm install`).
+1. Sets up Node.js 22 and Bun, installing locked dependencies cleanly (`bun install --frozen-lockfile` via `bun.lock`, with `--legacy-peer-deps` npm fallback).
 2. Runs `npm run lint` (`tsc --noEmit`).
 3. Configures the GitHub Pages base path automatically via `actions/configure-pages` (setting `VITE_BASE_PATH` to `/<repository-name>/` for project sites or `/` for user/custom-domain sites).
 4. Builds the production Vite bundle into `dist/` (`npm run build`) and adds `dist/404.html` for SPA fallback.
